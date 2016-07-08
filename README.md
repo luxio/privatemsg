@@ -24,7 +24,7 @@ privatemsg_create('Message subject', 'Message body', ["a_drupal_user_name"], nul
 
 ## Send a private message to an existing thread 456
 ```
-privatemsg_create(null, 'Message body', ["a_drupal_user_name"], 45, {
+privatemsg_create(null, 'Message body', ["a_drupal_user_name"], 456, {
   success: function(result) {
     if (result[0]) {
       console.log('Message sent!');
