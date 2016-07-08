@@ -9,9 +9,9 @@ The Private Message module for DrupalGap.
 
 ## Viewing private messages
 
-This module has a few built in pages to view a user's private messages list, and to view a particular thread.
+This module has a few built in pages to view a user's private messages list, and to view a particular thread and add messages to it.
 
-To view a user 123's list of private messages, just navigate to `user-messages/123`. This will display a list of threads, which can then be clicked on to view and message a particular thread 45 (e.g. `messages/view/456`).
+To view a user's list of private messages, just navigate to `user-messages/123`. This will display a list of threads for user 123, which can then be clicked on to view and message a particular thread 456 (e.g. `messages/view/456`).
 
 ## Send a new private message
 ```
@@ -22,9 +22,9 @@ privatemsg_create('Message subject', 'Message body', ["a_drupal_user_name"], nul
 });
 ```
 
-## Send a private message to an existing thread 123
+## Send a private message to an existing thread 456
 ```
-privatemsg_create(null, 'Message body', ["a_drupal_user_name"], 123, {
+privatemsg_create(null, 'Message body', ["a_drupal_user_name"], 45, {
   success: function(result) {
     if (result[0]) {
       console.log('Message sent!');
@@ -35,7 +35,7 @@ privatemsg_create(null, 'Message body', ["a_drupal_user_name"], 123, {
 
 ## Retrieve a private message
 ```
-privatemsg_retrieve(thread_id, {
+privatemsg_retrieve(456, {
   success: function(thread) {
     console.log(thread);
   }
